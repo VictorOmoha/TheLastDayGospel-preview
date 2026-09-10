@@ -25,4 +25,155 @@ img[src$="prayer-outreach.jpg"]{filter:brightness(1.14) contrast(1.025) saturate
 @media(max-width:1100px){.ministry-grid{gap:18px}.image-card,.image-card>a{min-height:430px}.word-card{padding:25px}.word-card h3{font-size:2.9rem}.image-card a>div{left:22px}.image-card h3{font-size:2.3rem}.event-radio-grid{grid-template-columns:1.5fr 1fr;gap:24px}.event-feature{grid-template-columns:1fr;padding:25px;gap:22px}.date-block{width:130px}.split-section,.mission-band>.wrap,.scripture-library{gap:45px}.mission-band img{height:580px}.contact-layout{gap:40px}.contact-info{padding:30px}.giving-layout{gap:55px}.giving-card{padding:32px}.form-row{grid-template-columns:1fr;gap:0}.contact-faq{gap:45px}}
 @media(max-width:800px){.ministry-grid{grid-template-columns:1fr 1fr}.word-card{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:15px 35px}.word-card>.eyebrow{grid-column:1/-1}.word-card h3{grid-row:2/4;margin:0}.word-card>.text-link{padding-top:0;margin-top:0}.word-card h3 br{display:none}.section-heading{align-items:start;flex-direction:column;gap:10px}.section-heading .text-link{margin-top:8px}.event-radio-grid{grid-template-columns:1fr 1fr}.event-feature h3{font-size:2rem}.mission-band>.wrap{gap:30px}.mission-band h2{font-size:3.4rem}.mission-band img{height:680px}.page-hero-copy{padding:40px 28px}.page-hero h1{font-size:4.6rem}.page-hero-copy p{font-size:.9375rem}.page-hero>img{min-height:480px}.split-section{gap:35px}.photo-feature>img{height:560px}.split-section h2{font-size:3.3rem}.split-section h3{font-size:1.8rem}.scripture-library{grid-template-columns:1fr;gap:36px}.scripture-library img{display:none}.contact-title>p{position:static;margin-top:30px}.contact-layout{gap:25px;grid-template-columns:.9fr 1.1fr}.contact-info{padding:25px}.contact-info h2{font-size:3rem}.contact-form-panel h2{font-size:2rem}.contact-faq{grid-template-columns:1fr;gap:25px}.giving-layout{grid-template-columns:1fr;gap:30px}.giving-card{max-width:600px;width:100%}.gospel-plan li{padding:20px}.gospel-plan h3{font-size:1.8rem}.reading-summary{flex-direction:column;gap:20px}.vision-block{gap:24px 40px}.location-card{padding:26px}.location-card h3{font-size:2.1rem}}
 @media(max-width:560px){.ministry-grid{grid-template-columns:1fr;gap:20px}.image-card,.image-card>a{min-height:430px}.word-card{display:block;padding:30px}.word-card h3{font-size:3rem;margin:20px 0}.word-card>.text-link{margin-top:20px}.event-radio-grid{grid-template-columns:1fr}.event-feature{padding:25px}.date-block{padding:14px;display:flex;width:auto;justify-content:space-between;align-items:center;gap:15px}.date-block strong{font-size:2.4rem}.event-feature h3{font-size:2.5rem}.radio-card{padding:28px}.mission-band>.wrap{width:100%;grid-template-columns:1fr;gap:0}.mission-band>.wrap>div{padding:48px 24px}.mission-band img{height:470px;object-position:center 35%}.page-hero{grid-template-columns:1fr}.page-hero-copy{padding:45px 24px}.page-hero h1{font-size:clamp(4.4rem,17vw,6.5rem)}.page-hero>img{height:330px;min-height:0;max-height:330px;object-position:center 40%}.pink-hero>img{object-position:center 48%}.location-grid{grid-template-columns:1fr;gap:20px}.split-section{grid-template-columns:1fr;gap:30px}.split-section p{margin-top:20px}.photo-feature>img{height:420px}.vision-block{display:block}.vision-block h2{margin:20px 0 26px}.vision-block .muted{margin-top:12px}.gospel-plan{grid-template-columns:1fr 1fr}.gospel-plan li{padding:22px}.gospel-plan li:nth-child(2){border-right:0}.gospel-plan li:nth-child(-n+2){border-bottom:1px solid var(--line)}.gospel-plan h3{font-size:2.3rem;margin-top:18px}.scripture{padding:48px 0}.scripture blockquote{font-size:2.3rem}.scripture p{font-size:.8125rem}.contact-title{padding-bottom:40px}.contact-title h1{font-size:5.5rem}.contact-layout{grid-template-columns:1fr;gap:40px}.contact-form-panel{grid-row:1}.contact-form-panel h2{font-size:2.3rem}.contact-info{padding:30px}.giving-hero{padding:48px 0}.giving-hero h1{font-size:clamp(4.8rem,19vw,7rem)}.giving-card{padding:30px}.giving-card h2{font-size:3.4rem}.prayer-support-photo{height:240px}.section-heading h2{font-size:3.3rem}.location-number{z-index:0;opacity:.6}.location-card>h3,.location-card>.eyebrow{position:relative}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+/* A quiet motion system: quick feedback, unhurried entrances, no looping effects. */
+:root {
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-soft: cubic-bezier(.2, .65, .3, 1);
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, .96);
+  transition: background-color 320ms var(--ease-soft), box-shadow 320ms var(--ease-soft), border-color 320ms var(--ease-soft);
+}
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, .88);
+  border-bottom-color: rgba(24, 24, 24, .08);
+  box-shadow: 0 5px 24px rgba(24, 24, 24, .06);
+}
+@supports (backdrop-filter: blur(18px)) or (-webkit-backdrop-filter: blur(18px)) {
+  .site-header {
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+  }
+}
+.hero { overflow: clip; }
+.brand { transition: opacity 200ms ease, transform 250ms var(--ease-out); }
+.brand:active { opacity: .7; transform: scale(.985); }
+.main-nav a {
+  transition: color 220ms ease, background-color 220ms ease, transform 300ms var(--ease-out);
+}
+.main-nav a:not(.nav-giving)::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--ease-out);
+}
+.main-nav a[aria-current=page]::after,
+.main-nav a:focus-visible::after { transform: scaleX(1); }
+.button, .menu-toggle, .main-nav .nav-giving { border-radius: 7px; }
+.button {
+  transition: transform 320ms var(--ease-out), background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 320ms var(--ease-out);
+}
+.button > span, .text-link > span, .card-link > span, .nav-giving > span {
+  display: inline-block;
+  transition: transform 360ms var(--ease-out);
+}
+.button:active, .main-nav .nav-giving:active {
+  transform: translateY(0) scale(.975);
+  box-shadow: none;
+  transition-duration: 100ms;
+}
+.text-link {
+  text-decoration-thickness: 1px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+.text-link:active { opacity: .75; }
+.image-card, .word-card, .location-card, .radio-card {
+  transition: translate 440ms var(--ease-out), box-shadow 440ms var(--ease-out), border-color 250ms ease;
+}
+.image-card img { transition: transform 850ms var(--ease-out); }
+.card-link { transition: border-color 300ms ease; }
+.menu-toggle {
+  transition: color 180ms ease, background-color 180ms ease, transform 250ms var(--ease-out), border-color 180ms ease;
+}
+.menu-toggle > span {
+  display: inline-block;
+  transition: transform 320ms var(--ease-out);
+}
+.menu-toggle[aria-expanded=true] { color: var(--red); border-color: var(--red); background: #fff1f3; }
+.menu-toggle[aria-expanded=true] > span { transform: rotate(90deg); }
+.menu-toggle:active { transform: scale(.96); }
+.field input, .field textarea, .field select {
+  border-radius: 7px;
+  transition: border-color 200ms ease, box-shadow 250ms var(--ease-out), background-color 200ms ease;
+}
+.field label { transition: color 200ms ease; }
+.field:focus-within label { color: var(--dark-red); }
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(227, 19, 40, .08);
+}
+summary { transition: color 180ms ease; }
+summary::after { transition: transform 300ms var(--ease-out); }
+details[open] summary::after { content: '+'; transform: rotate(45deg); }
+details[open] summary { color: var(--dark-red); }
+.form-feedback:not([hidden]) { animation: feedback-arrive 300ms var(--ease-out) both; border-radius: 7px; }
+@keyframes feedback-arrive {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .main-nav a:not(.nav-giving):hover::after { transform: scaleX(1); }
+  .main-nav .nav-giving:hover { background: #f4df00; transform: translateY(-1px); }
+  .button:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0, 0, 0, .1); }
+  .button:active { transform: translateY(0) scale(.975); box-shadow: none; }
+  .button:hover > span, .text-link:hover > span, .nav-giving:hover > span { transform: translate(2px, -2px); }
+  .image-card:hover, .word-card:hover, .location-card:hover, .radio-card:hover {
+    translate: 0 -4px;
+    box-shadow: 0 12px 28px rgba(24, 24, 24, .08);
+  }
+  .location-card:hover { border-color: #e8a8b2; }
+  .image-card a:hover img { transform: scale(1.045); }
+  .image-card a:hover .card-link { border-color: #fff; }
+  .image-card a:hover .card-link > span { transform: translate(2px, -2px); }
+  summary:hover { color: var(--dark-red); }
+}
+@media (max-width: 800px) {
+  .main-nav {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px) scale(.99);
+    transform-origin: center top;
+    max-height: calc(100dvh - 85px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-radius: 0 0 14px 14px;
+    border-bottom: 1px solid rgba(24, 24, 24, .12);
+    box-shadow: 0 20px 28px rgba(24, 24, 24, .08);
+    transition: opacity 180ms ease, transform 300ms var(--ease-out), visibility 0s 300ms;
+  }
+  .main-nav.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition-delay: 0s;
+  }
+  .main-nav a:not(.nav-giving)::after { left: 13px; right: auto; width: 30px; }
+}
+@media (hover: none) {
+  .button:hover { transform: none; }
+  .button:active { transform: scale(.975); }
+  .image-card a:hover img { transform: none; }
+}
+@media print {
+  .site-header { position: static; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .button:hover, .button:active, .brand:active, .menu-toggle:active,
+  .main-nav .nav-giving:hover, .main-nav .nav-giving:active,
+  .button:hover > span, .text-link:hover > span, .nav-giving:hover > span,
+  .image-card a:hover img, .image-card a:hover .card-link > span { transform: none; }
+  .image-card:hover, .word-card:hover, .location-card:hover, .radio-card:hover { translate: none; }
+}

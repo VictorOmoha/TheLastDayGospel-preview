@@ -1,14 +1,25 @@
+// Animation failures must never interrupt navigation or email preparation.
+void import('./motion.js').catch(() => {});
+
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
-function closeMenu() { menu?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('open'); }
+function closeMenu() {
+  menu?.setAttribute('aria-expanded', 'false');
+  nav?.classList.remove('open');
+  if (nav) nav.inert = matchMedia('(max-width: 800px)').matches;
+}
 menu?.addEventListener('click', () => {
   const open = menu.getAttribute('aria-expanded') !== 'true';
   menu.setAttribute('aria-expanded', String(open));
   nav.classList.toggle('open', open);
+  nav.inert = !open;
 });
 document.addEventListener('keydown', event => { if(event.key === 'Escape' && nav?.classList.contains('open')) {closeMenu();menu.focus();} });
 nav?.addEventListener('click', event => {if(event.target.closest('a')) closeMenu();});
 document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
+// Reset mobile state when switching layouts, so reopening starts consistently.
+matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
+closeMenu();
 
 const topicSelect = document.querySelector('#contact-topic');
 const topic = new URLSearchParams(location.search).get('topic');
