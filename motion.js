@@ -8,11 +8,11 @@ let observer;
 
 const groups = [
   '.hero-copy', '.page-hero-copy', '.contact-title', '.giving-hero .wrap',
-  '.ministry-grid', '.location-grid', '.prayer-times', '.gospel-plan',
+  '.fellowship-grid', '.ministry-grid', '.location-grid', '.prayer-times', '.gospel-plan',
 ];
 const revealSelector = [
   ...groups.map(selector => `${selector} > *`),
-  '.hero-photo', '.intro > div', '.section-heading', '.prayer-intro',
+  '.intro > div', '.section-heading', '.prayer-intro',
   '.event-radio-grid > *', '.mission-band .wrap > *', '.split-section > *',
   '.scripture .wrap', '.vision-block', '.reading-summary',
   '.scripture-library > div', '.contact-layout > *', '.contact-faq > *',
@@ -32,11 +32,10 @@ function reveal(element, delay = 0) {
   if (entered.has(element)) return;
   entered.add(element);
   if (reducedMotion.matches || !element.animate) return;
-  const photo = element.matches('.hero-photo');
   const animation = element.animate([
-    {opacity: 0, transform: photo ? 'scale(1.025)' : 'translateY(18px)'},
+    {opacity: 0, transform: 'translateY(16px)'},
     {opacity: 1, transform: 'none'},
-  ], {duration: photo ? 900 : 700, delay, easing, fill: 'backwards'});
+  ], {duration: 700, delay, easing, fill: 'backwards'});
   running.set(element, animation);
   const release = () => { if (running.get(element) === animation) running.delete(element); };
   animation.onfinish = release;
