@@ -8,7 +8,7 @@ let observer;
 
 const groups = [
   '.hero-copy', '.page-hero-copy', '.contact-title', '.giving-hero .wrap',
-  '.fellowship-grid', '.ministry-grid', '.location-grid', '.prayer-times', '.gospel-plan',
+  '.fellowship-grid', '.ministry-grid', '.location-grid', '.prayer-times', '.gospel-plan', '.prayer-gallery',
 ];
 const revealSelector = [
   ...groups.map(selector => `${selector} > *`),
@@ -16,7 +16,7 @@ const revealSelector = [
   '.event-radio-grid > *', '.mission-band .wrap > *', '.split-section > *',
   '.scripture .wrap', '.vision-block', '.reading-summary',
   '.scripture-library > div', '.contact-layout > *', '.contact-faq > *',
-  '.giving-layout > *', '.footer-top > *',
+  '.giving-layout > *', '.word-broadcast > *', '.footer-top > *',
 ].join(',');
 const candidates = [...document.querySelectorAll(revealSelector)];
 // Do not animate nested blocks twice or fade children inside a moving parent.

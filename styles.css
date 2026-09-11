@@ -628,3 +628,41 @@ h1,h2,h3{color:var(--green)}
 }
 @media(max-width:380px){.gospel-plan li{padding:18px}.gospel-plan h3{font-size:1.35rem}.hero-copy .button,.hero-copy .button.yellow{width:235px}}
 @media(prefers-reduced-motion:reduce){.fellowship-card:hover{transform:none}}
+
+/* Photo-led entrances to the three fellowship pages. */
+.main-nav{gap:28px}
+.fellowship-section{padding-top:42px}
+.fellowship-grid{gap:26px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.fellowship-card{display:flex;flex-direction:column;min-width:0;padding:0;text-align:left;border-radius:10px;background:var(--paper);overflow:hidden}
+.fellowship-card+.fellowship-card{border:0}.fellowship-card:before{display:none}
+.fellowship-photo{height:270px;overflow:hidden;background:var(--pink)}
+.fellowship-photo img{width:100%;height:100%;object-fit:cover;transition:transform 850ms var(--ease-out)}
+.fellowship-card.word img{object-position:62% 35%}.fellowship-card.service img{object-position:center 28%}.fellowship-card.prayer img{object-position:center 56%}
+.fellowship-copy{display:flex;flex-direction:column;flex:1;padding:28px}
+.fellowship-copy:before{content:'';width:56px;height:4px;background:#068161;margin-bottom:22px;transition:width 400ms var(--ease-out)}
+.service .fellowship-copy:before{background:var(--red)}.prayer .fellowship-copy:before{background:var(--yellow)}
+.fellowship-card h2{font-size:clamp(1.65rem,2.5vw,2.15rem);line-height:1.12;margin-bottom:18px}
+.fellowship-card p{font:400 .9375rem/1.7 var(--body);color:var(--muted);margin:0;max-width:none}
+.fellowship-details{list-style:none;margin:20px 0 25px;padding:0;border-top:1px solid var(--line);font-size:.8125rem;line-height:1.6;color:var(--green)}
+.fellowship-details li{padding:11px 0;border-bottom:1px solid var(--line)}
+.fellowship-cta{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:auto;font-size:.875rem;font-weight:600;color:var(--green)}
+.fellowship-cta .link-arrow{width:19px;height:19px}
+.prayer-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.prayer-gallery figure{margin:0;min-width:0}.prayer-gallery img{width:100%;height:370px;object-fit:cover;border-radius:10px;object-position:center 45%}
+.prayer-gallery figure:first-child img{object-position:center 30%}.prayer-gallery figure:last-child img{object-position:center 62%}
+.prayer-gallery figcaption{font-size:.875rem;color:var(--green);padding:16px 0 0;line-height:1.6}
+.food-support{align-items:center}.food-support figure{margin:0;min-width:0}.food-support img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.food-support figcaption{font-size:.6875rem;line-height:1.6;color:var(--muted);margin-top:13px}.food-support figcaption a{text-underline-offset:3px}
+.food-support h3{font-size:1.4rem;margin:24px 0 0}.food-support p{font-size:.9375rem}
+.word-hero>img{object-position:62% 35%}
+.word-broadcast{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}.word-broadcast>*{min-width:0}.word-broadcast h2{margin-top:16px}.word-broadcast .lead{margin-top:25px}.word-broadcast p+p{margin-top:18px}
+.broadcast-card{background:var(--green);color:var(--cream);border-radius:12px;padding:38px}.broadcast-card>.eyebrow{color:var(--yellow)}
+.broadcast-card h3{color:var(--cream);font-size:3.1rem;line-height:1.1;margin-top:22px}.broadcast-card h3 span{display:block;font-size:2rem;color:var(--yellow);margin-top:8px}
+.broadcast-card dl{margin:28px 0 22px}.broadcast-card dl>div{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:15px 0;border-top:1px solid #ffffff30}.broadcast-card dl>div:last-child{border-bottom:1px solid #ffffff30}
+.broadcast-card dt{font-size:.75rem;color:#c3d5c8}.broadcast-card dd{font-size:1rem;font-weight:600;text-align:right;margin:0}.broadcast-card p{font-size:.875rem;color:#e0e9df}
+@media(hover:hover) and (pointer:fine){.fellowship-card:hover .fellowship-copy:before{width:76px}.fellowship-card:hover img{transform:scale(1.035)}.fellowship-card:hover .link-arrow{transform:translate(2px,-2px)}}
+@media(max-width:1100px){.main-nav{gap:20px}.site-header{gap:24px}.fellowship-grid,.prayer-gallery{gap:20px}.fellowship-photo{height:230px}.fellowship-copy{padding:24px}.word-broadcast{gap:40px}}
+@media(min-width:801px) and (max-width:960px){.site-header{padding-inline:24px;gap:20px}.main-nav{gap:15px}.main-nav a{font-size:1rem}.site-header .header-connect{min-width:150px;font-size:1.05rem;padding-inline:15px;background:var(--red)}}
+@media(max-width:800px){.main-nav{gap:4px}.fellowship-grid{gap:14px}.fellowship-photo{height:200px}.fellowship-copy{padding:20px}.fellowship-card h2{font-size:1.5rem}.fellowship-card p{font-size:.875rem}.fellowship-details{font-size:.75rem}.fellowship-cta{font-size:.8rem}.prayer-gallery{gap:18px}.prayer-gallery img{height:280px}.word-broadcast{gap:30px}.broadcast-card{padding:28px}.broadcast-card h3{font-size:2.6rem}}
+@media(max-width:620px){.fellowship-section{padding-top:26px}.fellowship-grid{grid-template-columns:1fr;gap:24px}.fellowship-card+.fellowship-card{border:0}.fellowship-photo{height:280px}.fellowship-copy{padding:26px}.fellowship-card h2{font-size:2rem}.fellowship-card p{font-size:.9375rem;max-width:none}.fellowship-details{font-size:.8125rem}.fellowship-cta{font-size:.875rem}.fellowship-section .serving-line{margin-top:28px}.word-broadcast{grid-template-columns:1fr;gap:34px}.prayer-gallery{grid-template-columns:1fr;gap:28px}.prayer-gallery img{height:auto;aspect-ratio:4/3}.prayer-gallery figcaption{padding-top:12px}.broadcast-card h3{font-size:2.8rem}.food-support h2{font-size:2.55rem}}
+@media(prefers-reduced-motion:reduce){.fellowship-card:hover img,.fellowship-card:hover .link-arrow{transform:none}}
