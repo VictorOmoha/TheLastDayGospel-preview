@@ -1,5 +1,5 @@
 // Animation failures must never interrupt navigation or email preparation.
-void import('./motion.js?v=5a57736e62').catch(() => {});
+void import('./motion.js?v=4e9766d5b6').catch(() => {});
 
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
