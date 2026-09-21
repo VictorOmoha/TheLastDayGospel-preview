@@ -651,7 +651,9 @@ h1,h2,h3{color:var(--green)}
 .prayer-gallery figure{margin:0;min-width:0}.prayer-gallery img{width:100%;height:370px;object-fit:cover;border-radius:10px;object-position:center 45%}
 .prayer-gallery figure:first-child img{object-position:center 30%}.prayer-gallery figure:last-child img{object-position:center 62%}
 .prayer-gallery figcaption{font-size:.875rem;color:var(--green);padding:16px 0 0;line-height:1.6}
-.food-support{align-items:center}.food-support figure{margin:0;min-width:0}.food-support img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.food-support{align-items:center}.food-support figure{margin:0;min-width:0}.food-support img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
+.food-support-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.food-support-gallery figcaption{grid-column:1/-1;margin-top:0}
 .food-support figcaption{font-size:.6875rem;line-height:1.6;color:var(--muted);margin-top:13px}.food-support figcaption a{text-underline-offset:3px}
 .food-support h3{font-size:1.4rem;margin:24px 0 0}.food-support p{font-size:.9375rem}
 .word-hero>img{object-position:62% 35%}
