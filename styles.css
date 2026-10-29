@@ -679,3 +679,18 @@ h1,h2,h3{color:var(--green)}
 @media(max-width:800px){.main-nav{gap:4px}.fellowship-grid{gap:14px}.fellowship-photo{height:200px}.fellowship-copy{padding:20px}.fellowship-card h2{font-size:1.5rem}.fellowship-card p{font-size:.875rem}.fellowship-details{font-size:.75rem}.fellowship-cta{font-size:.8rem}.prayer-gallery{gap:18px}.prayer-gallery img{height:280px}.word-broadcast{gap:30px}.broadcast-card{padding:28px}.broadcast-card h3{font-size:2.6rem}}
 @media(max-width:620px){.fellowship-section{padding-top:26px}.fellowship-grid{grid-template-columns:1fr;gap:24px}.fellowship-card+.fellowship-card{border:0}.fellowship-photo{height:280px}.fellowship-copy{padding:26px}.fellowship-card h2{font-size:2rem}.fellowship-card p{font-size:.9375rem;max-width:none}.fellowship-details{font-size:.8125rem}.fellowship-cta{font-size:.875rem}.fellowship-section .serving-line{margin-top:28px}.word-broadcast{grid-template-columns:1fr;gap:34px}.prayer-gallery{grid-template-columns:1fr;gap:28px}.prayer-gallery img{height:auto;aspect-ratio:4/3}.prayer-gallery figcaption{padding-top:12px}.broadcast-card h3{font-size:2.8rem}.food-support h2{font-size:2.55rem}}
 @media(prefers-reduced-motion:reduce){.fellowship-card:hover img,.fellowship-card:hover .link-arrow{transform:none}}
+
+/* Client content updates */
+.page-home .header-connect{display:none}
+.hero-copy>.eyebrow{font-size:clamp(1.2rem,2vw,1.8rem);max-width:900px}
+.hero-copy .hero-message{font-size:clamp(1.1rem,2vw,1.5rem);margin-top:18px;color:var(--deep-green)}
+.page-hero .eyebrow{font-size:clamp(1.2rem,2.5vw,2rem);line-height:1.2}
+.reading-verse{margin-top:40px;padding:28px;border-left:4px solid var(--red);background:var(--cream);font-size:1.15rem;line-height:1.7}.reading-verse cite{display:block;margin-top:12px;font-size:.9rem;font-style:normal}
+.light-photo{object-position:center 70%;mask-image:linear-gradient(to bottom, transparent 0%, black 25%)}
+.beliefs{max-width:900px}.beliefs h1{font-size:clamp(4rem,8vw,7rem);margin:20px 0 35px}.beliefs h2{font-size:clamp(2rem,4vw,3rem);margin:44px 0 15px}.beliefs p,.beliefs blockquote{font-size:1.1rem;line-height:1.8}.beliefs p+p{margin-top:20px}.beliefs blockquote{margin:24px 0;padding:25px;border-left:4px solid var(--red);background:var(--cream)}
+@media(max-width:620px){.hero-copy>.eyebrow{font-size:1.1rem;max-width:400px}.prayer-times p{display:block}.page-hero .eyebrow{font-size:1.25rem}}
+
+.service-scripture blockquote,.page-word .scripture blockquote,.page-prayer .scripture blockquote{font-size:clamp(1.35rem,2.2vw,2.1rem);line-height:1.5}
+
+.page-hero .hero-subtitle{font-size:clamp(2rem,3.5vw,3.4rem);line-height:1.1;margin:20px 0;color:var(--green)}
+@media(min-width:801px) and (max-width:1100px){.site-header{gap:16px}.main-nav{gap:12px}.main-nav a{font-size:.95rem}.site-header .header-connect{min-width:145px;font-size:1rem;padding-inline:12px}}
