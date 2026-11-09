@@ -1,8 +1,8 @@
-@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-display:swap;src:url('/TheLastDayGospel-preview/assets/roboto.ttf') format('truetype')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/TheLastDayGospel-preview/assets/inter-400.ttf') format('truetype')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/TheLastDayGospel-preview/assets/inter-500.ttf') format('truetype')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/TheLastDayGospel-preview/assets/inter-600.ttf') format('truetype')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/TheLastDayGospel-preview/assets/inter-700.ttf') format('truetype')}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/roboto.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/inter-400.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/inter-500.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/inter-600.ttf') format('truetype')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/inter-700.ttf') format('truetype')}
 :root{--red:#cd4508;--dark-red:#b83906;--yellow:#ffd239;--pink:#edf2e8;--ink:#064c39;--paper:#fffdf8;--muted:#59665d;--line:#dfd9c9;--display:'Roboto Condensed','Arial Narrow',Arial,sans-serif;--body:'Inter',Arial,sans-serif}
 /* Display-only corrections: source photographs remain byte-for-byte unchanged. */
 img[src$="community-outreach.jpg"]{filter:brightness(1.045) contrast(1.025) saturate(.95)}
@@ -548,7 +548,7 @@ h1,h2,h3{color:var(--green)}
 .hero-copy .button:not(.yellow),.header-connect{background:#f04d0b}
 .site-header .header-connect{font-size:1.2rem}
 .button.yellow{color:var(--green)}.button.dark{background:var(--green);border-color:transparent}.button.dark:hover{background:var(--deep-green)}
-.link-arrow{display:inline-block;flex-shrink:0;width:20px;height:20px;background:currentColor;mask:url('/TheLastDayGospel-preview/assets/arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('/TheLastDayGospel-preview/assets/arrow-up-right.svg') center/contain no-repeat}
+.link-arrow{display:inline-block;flex-shrink:0;width:20px;height:20px;background:currentColor;mask:url('/assets/arrow-up-right.svg') center/contain no-repeat;-webkit-mask:url('/assets/arrow-up-right.svg') center/contain no-repeat}
 .text-link{color:var(--green);gap:14px}.footer-brand{text-transform:none}.site-footer{background:var(--deep-green)}.footer-top p,.footer-top>div:last-child,.footer-bottom{color:#c3d5c8}
 
 .worship-hero{height:clamp(690px,62.15vw,940px);position:relative;isolation:isolate;overflow:clip;background:#e8d3ad;display:grid;place-items:center;padding:100px 24px 0}
